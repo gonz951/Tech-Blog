@@ -24,8 +24,8 @@ Post.hasMany(Comment, {
     foreignKey: 'user_id'
 });
 
-Comment.hasOne(Post, {
-
-})
+// Comment.hasOne(Post, {
+// ! FILL IN LATER
+// })
 
 module.exports = { User, Post, Comment };
