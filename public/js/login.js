@@ -1,3 +1,5 @@
+// * Might be finished
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
 

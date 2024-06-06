@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Post, User } = require('../models');
 const withAuth = require('../utils/auth'); 
 
+// ! DASHBOARD ROUTES MIGHT NEED TO MOVE
+
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({

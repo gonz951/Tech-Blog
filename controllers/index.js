@@ -1,5 +1,7 @@
 const router = require('express').Router();
 
+// * Boilerplate content
+
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
 
