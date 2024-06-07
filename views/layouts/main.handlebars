@@ -11,10 +11,10 @@
             <h1>Tech Blog</h1>
         </header>
     <nav>
-        <a href="/">Home</button>
-        <a href="/dashboard">Dashboard</button>
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
         {{#if logged_in}}
-        <button id="logout">Logout</button>
+        <a href="/logout" id="logout">Logout</a>
         {{else}}
         <a href="/login" id="login">Login</a>
         {{/if}}
