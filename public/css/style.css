@@ -33,7 +33,8 @@ header {
 
 main {
     padding: 0px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .post {
@@ -63,4 +64,51 @@ main {
     margin: 20px;
     margin-left: 25px;
     background-color: var(--green);
+}
+
+/* Dashboard */
+
+.format-all {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-box {
+    border: 2px red solid;
+    margin: 10px;
+    padding: 20px;
+    h3 {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    label {
+        display: block;
+        font-size: 20px;
+    }
+
+    input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 2px;
+        font-size: 20px;
+    }
+
+    button{
+        display: block;
+    }
+}
+
+.mini-message {
+    padding: 30px;
+    font-size: 15px;
+    color: var(--grey);
+}
+
+.user-post {
+    margin: 10px;
+    padding: 20px;
+    h4 {
+        font-size: 25px;
+    }
 }

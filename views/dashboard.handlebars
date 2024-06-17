@@ -1,15 +1,30 @@
-<div>
+<div class="format-all">
+    <div>
+        <div class="form-box">
+            <h3>Create a Post:</h3>
+            <form class="new-post-form">
+                <label for="post-name">Post name:</label>
+                <input type="text" id="post-name">
+                <label for="post-description">Description:</label>
+                <textarea type="text" id="post-description"></textarea>
+                <button type="submit">Create!</button>
+            </form>
+        </div>
+    </div>
+    <div>
     {{#if posts.length}}
         {{#each posts as |post|}}
-            <div>
+            <div class="user-post">
                 <h4>
                     <a href="/post/{{post.id}}/updatepost">{{post.name}}</a>
                 </h4>
                 <p>{{format_date post.date_created}}</p>
             </div>
         {{/each}}
+    {{else}}
+        <p class="mini-message">Start making new posts with the form here!</p>
     {{/if}}
-    <a href="/newpost">New post</a>
+    </div>
 </div>
 
 <script src="./js/dashboard.js"></script>
