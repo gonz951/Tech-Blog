@@ -1,26 +1,27 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('#username-login').value.trim();
+    // Collect values from the login form
+    const email = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
-    if (username && password) {
+    if (email && password) {
+      // Send a POST request to the API endpoint
       const response = await fetch('/api/users/login', {
         method: 'POST',
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-      
+  
       if (response.ok) {
+        
         document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
-        console.log('no user exists')
       }
     }
-  };
+};
   
-
-  document
+document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
